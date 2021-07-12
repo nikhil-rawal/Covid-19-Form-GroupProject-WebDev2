@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>COVID-19 Test Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="wd-image"></div>
+    <div class="lg-text">COVID-19</div>
+    <div class="st-text">test booking</div>
+    <div class="form-container-blured">
+        <div class="form-field-group">
+            <form autocomplete="off" name="covid19" method="POST">
+                <formhead id="error_message" style="display:none;border-bottom: solid 1px red;color: red;">* Error
+                </formhead>
+
+                <formhead>personal</formhead>
+                <row>
+                    <coloum><input type="text" minlength="2" maxlength="10" id="fname" name="fname"
+                            placeholder="first name" autofocus /></coloum>
+                    <coloum><input type="text" minlength="2" maxlength="10" id="lname" name="lname"
+                            placeholder="last name" />
+                    </coloum>
+                </row>
+                <row>
+                    <coloum class="flex radio">
+                        <coloum class="width: 30%;">
+                            <label style="color: whitesmoke">gender</label>
+                        </coloum>
+                        <coloum style="width: 70%">
+                            <input id="gender" style="width: auto" type="radio" name="gender" value="male" required />
+                            <label>male</label>
+                            <input id="gender" style="width: auto" type="radio" name="gender" value="female" required />
+                            <label>female</label>
+                        </coloum>
+                    </coloum>
+                    <coloum class="flex radio">
+                        <coloum style="width: 25%">
+                            <label style="color: whitesmoke">dob</label>
+                        </coloum>
+                        <coloum style="width: 75%">
+                            <input type="date" id="dob" name="dob" required />
+                        </coloum>
+                    </coloum>
+                </row>
+                <row>
+                    <coloum><input id="email" name="email" type="email" placeholder="email" required /></coloum>
+                    <coloum><input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="phone (123-456-7890)" maxlength="12" required /></coloum>
+                </row>
+                <row>
+                    <coloum><input type="text" id="address" name="address" placeholder="address" required /></coloum>
+                    <coloum><input type="text" id="city" name="city" placeholder="city" required /></coloum>
+                </row>
+                <row>
+                    <coloum><input id="province" name="province" type="text" placeholder="province" required /></coloum>
+                    <coloum><input id="countrycode" name="countrycode" type="text" style="text-transform:uppercase"
+                            pattern="[A-Za-z]{3}" placeholder="country code eg. usa " required></coloum>
+                </row>
+
+                <formhead>documents</formhead>
+                <row>
+                    <coloum style=" width: 100%" class="flex radio">
+                        <coloum style="width: 50%">
+                            <label style="color: whitesmoke">
+                                booking test name
+                                <span style="font-size: 10px">&#8594;</span></label>
+                        </coloum>
+                        <coloum style="width: 45%">
+                            <input type="text" id="testname" name="testname" value="COVID-19" readonly />
+                        </coloum>
+                    </coloum>
+                </row>
+                <row>
+                    <coloum style="width: 100%" class="flex radio">
+                        <coloum style="width: 50%">
+                            <label style="color: whitesmoke">
+                                physical activity level
+                                <span style="font-size: 10px">&#8594;</span></label>
+                        </coloum>
+                        <coloum style="width: 45%">
+                            <input type="range" id="pactivity" name="pactivity" style="width: 100%" step="10" min="1"
+                                max="100" name="bigstep" required />
+                        </coloum>
+                    </coloum>
+                </row>
+                <row>
+                    <coloum style="width: 100%" class="flex radio">
+                        <coloum style="width: 50%">
+                            <label style="color: whitesmoke">multiple attachments
+                                <span style="font-size: 10px">&#8594;</span>
+                            </label>
+                        </coloum>
+                        <coloum style="width: 50%">
+                            <input type="file" id="files" name="files" multiple required />
+                        </coloum>
+                    </coloum>
+                </row>
+
+                <formhead>booking</formhead>
+                <row>
+                    <coloum class="flex radio">
+                        <coloum style="width: 25%">
+                            <label style="color: whitesmoke">date</label>
+                        </coloum>
+                        <coloum style="width: 75%">
+                            <input type="date" id="booking" name="booking" max="2020-12-31" min="2020-10-12" required />
+                        </coloum>
+                    </coloum>
+
+                    <coloum class="flex radio">
+                        <coloum style="width: 25%">
+                            <label style="color: whitesmoke">time</label>
+                        </coloum>
+                        <coloum style="width: 75%">
+                            <input type="time" value="08:00" min="08:00" max="18:00" id="appt" name="appt" required />
+                        </coloum>
+                    </coloum>
+                </row>
+                <row>
+                    <coloum class="flex radio">
+                        <coloum style="width: 25%">
+                            <label style="color: whitesmoke">centre</label>
+                        </coloum>
+                        <coloum style="width: 75%">
+                            <select name="centre" id="centre"
+                                style="width: 90%; color: white; background-color: #4b4b4b">
+                                <option value="volvo">Thunder Bay</option>
+                                <option value="saab">Fort Frances</option>
+                                <option value="mercedes">Nipigon</option>
+                                <option value="audi">Sault Marys</option>
+                            </select>
+                        </coloum>
+                    </coloum>
+                    <coloum class="flex radio">
+                        <coloum style="width: 25%">
+                            <label style="color: whitesmoke">patients</label>
+                        </coloum>
+                        <coloum style="width: 75%">
+                            <input type="text" name="patients" id="patients" value="1" disabled />
+                        </coloum>
+                    </coloum>
+                </row>
+
+                <formhead>questionnaire</formhead>
+                <row>
+                    <coloum style="width: 100%" class="flex radio">
+                        <coloum style="width: 10%; color: whitesmoke">
+                            <input type="checkbox" id="q1" name="q1" required />
+                        </coloum>
+                        <coloum style="width: 90%; color: #f5f5f570">
+                            In the last 14 days, have you traveled outside of Canada or been
+                            in close contact with someone who has returned from travel
+                            outside of Canada?
+                        </coloum>
+                    </coloum>
+                </row>
+                <row>
+                    <coloum style="width: 100%" class="flex radio">
+                        <coloum style="width: 10%; color: whitesmoke">
+                            <input type="checkbox" id="q2" name="q2" required />
+                        </coloum>
+                        <coloum style="width: 90%; color: #f5f5f570">
+                            In the last 14 days, have you been in close contact with or
+                            cared for someone diagnosed with COVID-19?
+                        </coloum>
+                    </coloum>
+                </row>
+                <row style="margin-top: 20px">
+                    <button id="submit" onclick="validateForm()" name="submit" type="submit">Register</button>
+                </row>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,245 @@
+body,
+html {
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+}
+
+::placeholder {
+  color: #a7a7a7;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a7a7a7;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #a7a7a7;
+}
+
+.wd-image {
+  content: url(world-map.png);
+  /* height: 100%; */
+  position: absolute;
+  top: 10%;
+  left: 9%;
+  width: 40%;
+}
+
+.st-text {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 22%;
+  left: 13%;
+  width: 56%;
+  font-size: 48px;
+  color: white;
+}
+
+.bg-image {
+  background-image: url("background.jpg");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover;
+  -webkit-transform: scale(1.09);
+  -moz-transform: scale(1.09);
+  -o-transform: scale(1.09);
+  -ms-transform: scale(1.09);
+  transform: scale(1.09);
+}
+
+/* @media (min-width:320px)  { smartphones, portrait iPhone, portrait 480x320 phones (Android) } */
+@media (max-width: 600px) {
+  /* smartphones, Android phones, landscape iPhone */
+
+  .lg-text {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 2%;
+    left: 30%;
+    right: 24%;
+    /* margin-left: 34%; */
+    bottom: auto;
+    /* width: 56%; */
+    font-size: 40px;
+    color: white;
+  }
+
+  .form-container-blured {
+    padding: 15px;
+    width: auto;
+    left: 5%;
+    right: 5%;
+    top: 9%;
+    bottom: 1%;
+    height: fit-content;
+    position: absolute;
+    margin: 0px auto;
+    background-image: linear-gradient(180deg, #666666, #404040);
+    border-radius: 12px;
+  }
+
+  input,
+  select {
+    margin-top: 12px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border: 1px solid #7b7b7b;
+    border-radius: 7px;
+    color: white;
+    width: 90%;
+    padding: 10px;
+  }
+  select#centre {
+    width: 97%;
+  }
+
+  coloum {
+    width: 100%;
+    display: block;
+  }
+}
+
+row {
+  display: block;
+  margin-top: 10px;
+}
+
+label {
+  color: #a7a7a7;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+button {
+  background-color: whitesmoke;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: bolder;
+  margin-left: 40%;
+}
+
+input#phone:invalid,
+input#appt:invalid {
+  color: red;
+}
+
+input#phone:valid,
+input#appt:valid {
+  color: green;
+}
+
+@media (min-width: 600px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  coloum {
+    width: 49%;
+    display: inline-block;
+  }
+
+  .lg-text {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 32%;
+    right: 28%;
+    bottom: auto;
+    font-size: 60px;
+    color: white;
+  }
+
+  .form-container-blured {
+    padding: 15px;
+    width: auto;
+    left: 5%;
+    right: 5%;
+    top: 8%;
+    bottom: 1%;
+    height: auto;
+    position: absolute;
+    margin: 0px auto;
+    background-image: linear-gradient(180deg, #666666, #404040);
+    border-radius: 12px;
+  }
+
+  input,
+  select {
+    margin-top: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #7b7b7b;
+    color: white;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  coloum {
+    width: 49%;
+    display: inline-block;
+  }
+
+  .lg-text {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 12%;
+    left: 4%;
+    right: auto;
+    margin-left: auto;
+    bottom: auto;
+    width: 56%;
+    font-size: 78px;
+    color: white;
+  }
+
+  .form-container-blured {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin: 60px;
+    left: auto;
+    bottom: auto;
+    padding: 0px 30px 30px 40px;
+    right: 0px;
+    background-image: linear-gradient(180deg, #666666, #404040);
+    border-radius: 12px;
+  }
+
+  input,
+  select {
+    margin-top: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #7b7b7b;
+    color: white;
+    width: 90%;
+  }
+}
+
+formhead {
+  display: block;
+  padding: 30px 0px 0px 0px;
+  font-size: 15px;
+  color: white;
+  border-bottom: 2px solid white;
+  width: 95%;
+}
+.flex {
+  display: inline-flex;
+}
+
+.radio {
+  align-items: baseline;
+}
